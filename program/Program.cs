@@ -54,3 +54,18 @@ string[] ConvertArray(string[] array, int size)
     }
     return final;
 }
+
+// Создаем и заполняем начальный массив;
+Console.Write("Сколько элементов Вы хотите ввести? ");
+int arraySize = Convert.ToInt32(Console.ReadLine());
+string[] startArray = new string[arraySize];
+FillArray(startArray);
+
+// Преобразуем начальный массив в финальный;
+int finalSize = FinalArrayLength(startArray);
+string[] finalArray = ConvertArray(startArray, finalSize);
+
+// Печатаем результат
+PrintArray(startArray);
+Console.Write(" -> ");
+PrintArray(finalArray);
