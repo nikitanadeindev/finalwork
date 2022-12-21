@@ -39,3 +39,18 @@ int FinalArrayLength(string[] array)
     }
     return counter;
 }
+
+string[] ConvertArray(string[] array, int size)
+{
+    string[] final = new string[size];
+    int count = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length <= 3)
+        {
+            final[count] = array[i];
+            count++;
+        }
+    }
+    return final;
+}
